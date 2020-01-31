@@ -1,19 +1,55 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  StatusBar,
+  Image,
+  ImageBackground
+} from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <StatusBar barStyle={"dark-content"} />
+        <TouchableOpacity>
+          <AntDesign name="setting" style={styles.set} />
+        </TouchableOpacity>
+        <Image
+          source={require("./src/pompom/POMPOM_W.png")}
+          style={styles.pom}
+        ></Image>
+        <Text>Hello</Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center"
   },
+  pom: {
+    width: 250,
+    height: 250
+  },
+  setCover: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  set: {
+    fontSize: 25
+  },
+  conCover: {
+    flex: 3,
+    alignItems: "center"
+  }
 });
+
+export default App;
