@@ -9,6 +9,7 @@ import {
   ImageBackground
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import { ProgressBarClassic } from "react-native-progress-bar-classic";
 
 class App extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class App extends React.Component {
           source={require("./src/pompom/POMPOM_W.png")}
           style={styles.pom}
         ></Image>
+
         <Text>Hello</Text>
       </View>
     );
