@@ -8,9 +8,7 @@ import {
   Image,
   ImageBackground
 } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
-// import { styled } from "styled-components";
-// import { ProgressBarClassic } from "react-native-progress-bar-classic";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
 class App extends React.Component {
   render() {
@@ -23,6 +21,10 @@ class App extends React.Component {
           <StatusBar barStyle={"dark-content"} />
 
           <View style={styles.setCover}>
+            <MaterialIcons name="location-on" style={styles.loca}>
+              <Text>OO광역시 O구 OO동</Text>
+            </MaterialIcons>
+
             <TouchableOpacity>
               <AntDesign name="setting" style={styles.set} />
             </TouchableOpacity>
@@ -33,6 +35,10 @@ class App extends React.Component {
               source={require("./src/pompom/POMPOM_W.png")}
               style={styles.pom}
             ></Image>
+            <Text style={styles.pro}>Progress Bar</Text>
+            <TouchableOpacity>
+              <Text style={styles.more}>+ 상세정보</Text>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.conCover}>
@@ -47,6 +53,7 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+
     justifyContent: "center",
     alignItems: "center"
   },
@@ -67,10 +74,21 @@ const styles = StyleSheet.create({
     width: 250,
     height: 250
   },
+  loca: {
+    padding: 10
+  },
+  pro: {
+    paddingTop: 10
+  },
+  more: {
+    paddingTop: 10
+  },
   setCover: {
-    flex: 1,
-    justifyContent: "flex-start",
-    alignItems: "flex-end",
+    width: "90%",
+    flex: 0.5,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     paddingTop: 50
   },
   set: {
