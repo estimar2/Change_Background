@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   StatusBar,
   Image,
-  ImageBackground
+  ImageBackground,
+  Dimensions
 } from "react-native";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 
